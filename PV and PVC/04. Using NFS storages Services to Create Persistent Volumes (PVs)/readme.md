@@ -23,4 +23,25 @@ sudo systemctl enable nfs-server
 sudo nano /etc/exports
 ```
 ### Add Export Entry
-- Add an entry for the directory you want to share. For example: ```/exported/path *(rw,sync,no_root_squash,no_subtree_check)```
+- Add an entry for the directory you want to share. For example:
+  ```/exported/path *(rw,sync,no_root_squash,no_subtree_check)```
+  - `/exported/path`: Directory to be shared.
+  - `*`
+  - `rw`
+  - `sync`
+  - `no_root_squash`
+  - `no_subtree_check`
+
+### Export the Directory
+```
+sudo exportfs -ra
+```
+
+### Verify NFS Access
+- On a client machine, test the NFS export
+  ```
+  sudo mount -t nfs <nfs-server-ip>:/exported/path /mnt
+  ```
+- Ensure you can read and write to /mnt.
+
+
