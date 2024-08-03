@@ -22,11 +22,11 @@ sudo systemctl status nfs-server
 ## Choosing the Directory Path
 ### Create the Directory:
 ```
-sudo mkdir -p /exported/path
+sudo mkdir -p /k8s/storage-pvc
 ```
 ### Set Permissions:
 ```
-sudo chmod 777 /exported/path
+sudo chmod 777 /k8s/storage-pvc
 ```
 
 ## Configure Exports
@@ -37,7 +37,9 @@ sudo nano /etc/exports
 ```
 ### Add Export Entry
 - Add an entry for the directory you want to share. For example:
-  ```/exported/path *(rw,sync,no_root_squash,no_subtree_check)```
+  ```
+  /k8s/storage-pvc *(rw,sync,no_root_squash,no_subtree_check)
+  ```
   - `/exported/path`: Directory to be shared.
   - `*`: Allow access from all IPs. You can replace * with specific IPs or subnets for security.
   - `rw`: Read and write access.
