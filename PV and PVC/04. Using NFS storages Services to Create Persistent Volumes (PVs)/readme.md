@@ -52,12 +52,11 @@ sudo nano /etc/exports
 sudo exportfs -ra
 ```
 
-### Verify NFS Access
-- On a client machine, test the NFS export
+## Install NFS Client Utilities onto the nodes 
+- Before using the NFS storage in the cluster, make sure you have installed NFS Client Utilities.
   ```
-  sudo mount -t nfs <nfs-server-ip>:/exported/path /mnt
+  sudo apt-get install nfs-common
   ```
-- Ensure you can read and write to /mnt.
 
 # Set Up Kubernetes Configuration
 ## Create a Persistent Volume (PV)
