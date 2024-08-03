@@ -45,7 +45,7 @@
               privileged: true
     ```
   - Apply the DaemonSet:
-  - ```
+    ```
     kubectl apply -f daemonset.yaml
     ```
 
