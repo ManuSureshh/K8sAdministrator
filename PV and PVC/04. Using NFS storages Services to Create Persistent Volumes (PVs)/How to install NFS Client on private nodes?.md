@@ -61,5 +61,9 @@
         name: nfs-common
         state: present
 ```
+- Run the Playbook:
+```
+ansible-playbook -i inventory install-nfs-common.yml
+```
 
 6. Using VPN
