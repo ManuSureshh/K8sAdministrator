@@ -20,7 +20,7 @@
 2. **Kubernetes DaemonSet**
 - You can use a Kubernetes DaemonSet to run a job on all nodes in the cluster.
 - This method is useful if you need to perform operations on all nodes without direct SSH access.
-  - Create a DaemonSet:
+- Create a DaemonSet:
     ```
     apiVersion: apps/v1
     kind: DaemonSet
@@ -44,10 +44,10 @@
             securityContext:
               privileged: true
     ```
-    - Apply the DaemonSet:
-      ```
-      kubectl apply -f daemonset.yaml
-      ```
+  - Apply the DaemonSet:
+  ```
+  kubectl apply -f daemonset.yaml
+  ```
 
 4.
 5.  Using VPN
