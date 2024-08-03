@@ -1,0 +1,2 @@
+# How StorageClass works?
+
