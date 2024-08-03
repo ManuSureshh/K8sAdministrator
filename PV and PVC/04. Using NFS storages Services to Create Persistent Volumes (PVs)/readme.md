@@ -26,11 +26,11 @@ sudo nano /etc/exports
 - Add an entry for the directory you want to share. For example:
   ```/exported/path *(rw,sync,no_root_squash,no_subtree_check)```
   - `/exported/path`: Directory to be shared.
-  - `*`
-  - `rw`
-  - `sync`
-  - `no_root_squash`
-  - `no_subtree_check`
+  - `*`: Allow access from all IPs. You can replace * with specific IPs or subnets for security.
+  - `rw`: Read and write access.
+  - `sync`: Ensure changes are written to disk before responding.
+  - `no_root_squash`: Allows root users on clients to have root access on the server.
+  - `no_subtree_check`: Avoid subtree checking for performance improvement.
 
 ### Export the Directory
 ```
