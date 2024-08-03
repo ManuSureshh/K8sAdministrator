@@ -152,3 +152,33 @@ kubectl logs nfs-pod
 kubectl exec -it nfs-pod -- /bin/sh
 ```
 - Ensure that files can be written to and read from the NFS volume.
+ <br>
+ 
+# How to check whether it is working or not?
+```
+kubectl get pod
+```
+
+```
+kubectl exec -it podname -- sh
+```
+
+- Check the mounted path for container inside a pod (i.e: - - mountPath: "/usr/share/nginx/html")
+```
+cd /usr/share/nginx/html
+```
+- Create a file
+```
+touch pod-testfile.txt
+```
+```
+ls -l
+```
+
+- Then login to the NFS server and check the path which is used for PV.
+```
+cd /k8s/storage-pvc
+```
+```
+ls -l
+```
