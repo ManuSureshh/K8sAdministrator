@@ -23,5 +23,4 @@ sudo systemctl enable nfs-server
 sudo nano /etc/exports
 ```
 ### Add Export Entry
-- Add an entry for the directory you want to share. For example:
-`/exported/path *(rw,sync,no_root_squash,no_subtree_check)`
+- Add an entry for the directory you want to share. For example: ```/exported/path *(rw,sync,no_root_squash,no_subtree_check)```
