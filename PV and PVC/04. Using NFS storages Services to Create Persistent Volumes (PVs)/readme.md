@@ -50,16 +50,16 @@ sudo exportfs -ra
 - `nfs-pv.yaml`
   ```
   apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: nfs-pv
-spec:
-  capacity:
-    storage: 5Gi  # Adjust the size based on your needs
-  accessModes:
-    - ReadWriteMany  # Allows multiple nodes to mount the volume
-  nfs:
-    path: /exported/path  # Path specified in the NFS server's exports
-    server: <nfs-server-ip>  # IP address of your NFS server
-  storageClassName: nfs-storage
-```
+  kind: PersistentVolume
+  metadata:
+    name: nfs-pv
+  spec:
+    capacity:
+      storage: 5Gi  # Adjust the size based on your needs
+    accessModes:
+      - ReadWriteMany  # Allows multiple nodes to mount the volume
+    nfs:
+      path: /exported/path  # Path specified in the NFS server's exports
+      server: <nfs-server-ip>  # IP address of your NFS server
+    storageClassName: nfs-storage
+  ```
