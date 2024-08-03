@@ -43,6 +43,11 @@
             args: ["-c", "apt-get update && apt-get install -y nfs-common"]
             securityContext:
               privileged: true
-```
+    ```
+    - Apply the DaemonSet:
+      ```
+      kubectl apply -f daemonset.yaml
+      ```
 
-4.  Using VPN
+4.
+5.  Using VPN
