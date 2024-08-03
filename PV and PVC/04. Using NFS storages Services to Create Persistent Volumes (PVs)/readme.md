@@ -15,6 +15,9 @@ sudo systemctl start nfs-server
 ```
 sudo systemctl enable nfs-server
 ```
+```
+sudo systemctl status nfs-server
+```
 
 ## Choosing the Directory Path
 ### Create the Directory:
