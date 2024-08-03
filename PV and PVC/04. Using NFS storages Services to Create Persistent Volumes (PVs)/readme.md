@@ -1,5 +1,5 @@
 # Using the NFS server as a storage for Kubernetes cluster
-## Prepare the NFS Server
+## 01. Prepare the NFS Server
 ### Install NFS Server
 ```
 sudo apt update
@@ -19,7 +19,7 @@ sudo systemctl enable nfs-server
 sudo systemctl status nfs-server
 ```
 
-## Choosing the Directory Path
+## 02. Choosing the NFS Directory Path to use
 ### Create the Directory:
 ```
 sudo mkdir -p /k8s/storage-pvc
@@ -29,7 +29,7 @@ sudo mkdir -p /k8s/storage-pvc
 sudo chmod 777 /k8s/storage-pvc
 ```
 
-## Configure Exports
+## 03. Configure Exports
 ### Edit `/etc/exports`:
 - This file defines the directories you want to share over NFS.
 ```
@@ -52,7 +52,7 @@ sudo nano /etc/exports
 sudo exportfs -ra
 ```
 
-## Install NFS Client Utilities onto the nodes 
+## 04. Install NFS Client Utilities onto the nodes 
 - Before using the NFS storage in the cluster, make sure you have installed NFS Client Utilities.
   ```
   sudo apt-get install nfs-common
