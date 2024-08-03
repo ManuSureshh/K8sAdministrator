@@ -114,3 +114,23 @@ spec:
 ```
 kubectl apply -f nfs-pod.yaml
 ```
+
+# Monitor and Manage
+## Check PV and PVC Status
+```
+kubectl get pv
+```
+```
+kubectl get pvc
+```
+- Ensure that the PV is bound to the PVC and both are in a Bound state.
+
+## Test access
+- Verify that the pod is using the NFS volume correctly.
+```
+kubectl logs nfs-pod
+```
+```
+kubectl exec -it nfs-pod -- /bin/sh
+```
+- Ensure that files can be written to and read from the NFS volume.
