@@ -49,5 +49,17 @@
     kubectl apply -f daemonset.yaml
     ```
 
-4.
-5.  Using VPN
+4. Using Configuration Management Tools
+- Create an Ansible playbook to install nfs-common on your nodes.
+```
+- name: Install nfs-common on all nodes
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install nfs-common
+      apt:
+        name: nfs-common
+        state: present
+```
+
+6. Using VPN
