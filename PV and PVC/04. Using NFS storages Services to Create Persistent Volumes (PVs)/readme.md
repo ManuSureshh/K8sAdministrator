@@ -63,3 +63,54 @@ sudo exportfs -ra
       server: <nfs-server-ip>  # IP address of your NFS server
     storageClassName: nfs-storage
   ```
+
+### Apply the Configuration
+```
+kubectl apply -f nfs-pv.yaml
+```
+
+## Create a Persistent Volume Claim (PVC)
+### Create PVC YAML File
+- `nfs-pvc.yaml`
+  ```
+  apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    name: nfs-pvc
+  spec:
+    accessModes:
+      - ReadWriteMany
+    resources:
+      requests:
+        storage: 5Gi  # Must match the size specified in the PV
+    storageClassName: nfs-storage
+
+### Apply the Configuration
+```
+kubectl apply -f nfs-pvc.yaml
+```
+
+## Use the PVC in a Pod
+### Create Pod YAML File
+`nfs-pod.yaml`
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nfs-pod
+spec:
+  containers:
+    - name: nfs-container
+      image: nginx  # Replace with your desired container image
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: nfs-storage
+  volumes:
+    - name: nfs-storage
+      persistentVolumeClaim:
+        claimName: nfs-pvc
+```
+### Apply the Configuration
+```
+kubectl apply -f nfs-pod.yaml
+```
