@@ -52,11 +52,15 @@ sudo nano /etc/exports
 sudo exportfs -ra
 ```
 
+<br>
+
 # Install NFS Client Utilities onto the nodes 
 - Before using the NFS storage in the cluster, make sure you have installed NFS Client Utilities.
   ```
   sudo apt-get install nfs-common
   ```
+
+<br>
 
 # Set Up Kubernetes Configuration
 ## Create a Persistent Volume (PV)
