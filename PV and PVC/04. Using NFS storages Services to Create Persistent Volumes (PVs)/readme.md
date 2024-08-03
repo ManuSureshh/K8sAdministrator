@@ -52,7 +52,7 @@ sudo nano /etc/exports
 sudo exportfs -ra
 ```
 
-## 04. Install NFS Client Utilities onto the nodes 
+# Install NFS Client Utilities onto the nodes 
 - Before using the NFS storage in the cluster, make sure you have installed NFS Client Utilities.
   ```
   sudo apt-get install nfs-common
