@@ -16,6 +16,16 @@ sudo systemctl start nfs-server
 sudo systemctl enable nfs-server
 ```
 
+## Choosing the Directory Path
+### Create the Directory:
+```
+sudo mkdir -p /exported/path
+```
+### Set Permissions:
+```
+sudo chmod 777 /exported/path
+```
+
 ## Configure Exports
 ### Edit `/etc/exports`:
 - This file defines the directories you want to share over NFS.
