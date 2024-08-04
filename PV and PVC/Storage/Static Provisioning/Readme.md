@@ -9,3 +9,8 @@ In this provisioning method, we create PV's manually and then we instruct PVC's 
 
 
 ## Drawbacks of using Static Provisioning:
+- **Manual Management**- Requires manual intervention to create and manage PVs. And this can lead to many errors as the number PVs and PVCs grows.
+- **Scalability**- As your storage needs increase, manually managing PVs can become difficult.
+- **Complexity**- More complex to manage compared to dynamic provisioning.
+- **Resource Allocation**- You need to ensure that there are enough available PVs to meet PVC requests. If you run out of PVs or they don’t match the PVC requirements, it can lead to issues.
+- **Consistency**- There’s a risk of inconsistency if PVs are not properly created or if there’s a mismatch between PV specifications and PVC requests.
