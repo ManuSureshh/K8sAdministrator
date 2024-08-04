@@ -5,6 +5,8 @@
   ```
   kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/nfs-client-provisioner/master/deploy/nfs-client-provisioner.yaml
   ```
+  [or]
+  
   ```
   kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/nfs-subdir-external-provisioner/master/deploy/deploy.yaml
   ```
