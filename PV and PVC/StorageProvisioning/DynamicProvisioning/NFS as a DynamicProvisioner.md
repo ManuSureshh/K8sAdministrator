@@ -1,15 +1,41 @@
 ## NFS as a DynamicProvisioner
 - We can use NFS as both static and Dynamic Provisioner
 - In NFS as a Dynamic Provisioner, we create StorageClass and PVC. StorageClass will create PV automatically.
-- In order to use NFS as a Dynamic Provisioner, we need to install the `nfs-client-provisioner` or `nfs-subdir-external-provisioner`.
-  ```
-  kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/nfs-client-provisioner/master/deploy/nfs-client-provisioner.yaml
-  ```
-  [or]
-  
-  ```
-  kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/nfs-subdir-external-provisioner/master/deploy/deploy.yaml
-  ```
+- In order to use NFS as a Dynamic Provisioner, we need to install the `nfs-client-provisioner`.
+```
+curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
+```
+```
+sudo apt-get install apt-transport-https --yes
+```
+```
+echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+```
+```
+sudo apt-get update
+```
+```
+sudo apt-get install helm
+```
+```
+helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner
+```
+```
+helm install nfs-subdir-external-provisioner \
+nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
+--set nfs.server=10.124.0.9 \
+--set nfs.path=/data/nfs \
+--set storageClass.onDelete=true
+```
+```
+# Check pods and storage classes:
+kubectl get pod
+kubectl get sc
+```
+
+<br>
+
+
 - And while creating StorageClass, we should mention the 
 `StorageClass.yaml`
 ```
