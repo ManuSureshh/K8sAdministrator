@@ -10,9 +10,9 @@ spec:
   capacity:
     storage: 10Gi #desired storage capacity
   accessModes:
-    - ReadWriteMany # This can be ReadWriteMany, ReadOnlyMany, ReadWriteOnce
+    - ReadWriteMany # This can also be ReadWriteMany, ReadOnlyMany, ReadWriteOnce
   nfs:
     path: /path/to/nfs/export # add the path which is created in NFS server for the PV to use.
     server: nfs-server.example.com # this can also be the IP address of NFS server
-  persistentVolumeReclaimPolicy: Retain # this can be Retain, Recycle and Delete
+  persistentVolumeReclaimPolicy: Retain # this can also be Retain, Recycle and Delete
 ```  
