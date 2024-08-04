@@ -31,3 +31,32 @@ spec:
       storage: 10Gi # Must be less than or equal to the storage specified in the PV
 ```
 
+- If we want to use the created PV for our deployments, then we we use the created PVC in the manifest
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: nfs-storage
+          mountPath: /usr/share/nginx/html # Path inside the container where the PVC is mounted
+      volumes:
+      - name: nfs-storage
+        persistentVolumeClaim:
+          claimName: nfs-pvc # Name of the PVC to use
+```
