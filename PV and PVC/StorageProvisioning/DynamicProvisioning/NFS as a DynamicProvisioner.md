@@ -14,7 +14,7 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: nfs-storage
+  name: nfs-client-provisioner # use nfs-subdir-external-provisioner, if you install it on k8s
 provisioner: k8s.io/nfs
 parameters:
   server: <NFS_SERVER_IP>
