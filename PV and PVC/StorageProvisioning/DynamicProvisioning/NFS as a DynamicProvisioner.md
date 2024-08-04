@@ -1,7 +1,14 @@
 ## NFS as a DynamicProvisioner
 - We can use NFS as both static and Dynamic Provisioner
 - In NFS as a Dynamic Provisioner, we create StorageClass and PVC. StorageClass will create PV automatically.
-
+- In order to use NFS as a Dynamic Provisioner, we need to install the `nfs-client-provisioner` or `nfs-subdir-external-provisioner`.
+  ```
+  kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/nfs-client-provisioner/master/deploy/nfs-client-provisioner.yaml
+  ```
+  ```
+  kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/nfs-subdir-external-provisioner/master/deploy/deploy.yaml
+  ```
+- And while creating StorageClass, we should mention the 
 `StorageClass.yaml`
 ```
 apiVersion: storage.k8s.io/v1
@@ -76,5 +83,9 @@ spec:
       storage: 10Gi # should be same as mentioned in StorageClass
   storageClassName: nfs-storage
 ```
+
+<br>
+
+![image](https://github.com/user-attachments/assets/10101bf6-955a-4452-ac4b-51f866e1d97a)
 
 
