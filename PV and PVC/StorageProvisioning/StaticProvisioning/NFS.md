@@ -16,3 +16,18 @@ spec:
     server: nfs-server.example.com # this can also be the IP address of NFS server
   persistentVolumeReclaimPolicy: Retain # this can also be Retain, Recycle and Delete
 ```  
+
+- Now we need to create PVC in order to use the above PV.
+```
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nfs-pvc
+spec:
+  accessModes:
+    - ReadWriteMany # Must match the access modes defined in the PV
+  resources:
+    requests:
+      storage: 10Gi # Must be less than or equal to the storage specified in the PV
+```
+
