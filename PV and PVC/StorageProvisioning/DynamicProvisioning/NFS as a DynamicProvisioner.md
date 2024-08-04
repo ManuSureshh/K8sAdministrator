@@ -34,7 +34,7 @@ spec:
 ```
 
 
-Example: -
+## Example: -
 
 - Creating a directory at NFS server. The set the permissions and exporting the directory.
 ![image](https://github.com/user-attachments/assets/981aa139-4a84-4323-97f0-2e9e88ecc4a0)
@@ -60,5 +60,21 @@ volumeBindingMode: Immediate # Immediate, WaitForFirstConsumer
 ![image](https://github.com/user-attachments/assets/13a30a9e-6051-4823-9615-8159e5c581f3)
 ![image](https://github.com/user-attachments/assets/210b4341-d982-457c-a878-1d7c431b32bb)
 
+<br>
+
+`pvc.yaml`
+```
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-nfs-pvc
+spec:
+  accessModes:
+    - ReadWriteMany # should be same as mentioned in StorageClass
+  resources:
+    requests:
+      storage: 10Gi # should be same as mentioned in StorageClass
+  storageClassName: nfs-storage
+```
 
 
