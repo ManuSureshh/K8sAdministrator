@@ -32,3 +32,8 @@ spec:
       storage: 10Gi # should be same as mentioned in StorageClass
   storageClassName: nfs-storage 
 ```
+
+
+Example: -
+
+![image](https://github.com/user-attachments/assets/981aa139-4a84-4323-97f0-2e9e88ecc4a0)
