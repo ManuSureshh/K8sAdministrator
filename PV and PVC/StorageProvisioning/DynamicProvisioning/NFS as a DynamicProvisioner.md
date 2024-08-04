@@ -44,8 +44,8 @@ kubectl get sc
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: nfs-client
-provisioner: k8s.io/nfs
+  name: nfs-storage
+provisioner: nfs-subdir-external-provisioner
 parameters:
   server: <NFS_SERVER_IP>
   path: <EXPORT_PATH>
@@ -84,7 +84,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: nfs-storage
-provisioner: k8s.io/nfs
+provisioner: nfs-subdir-external-provisioner
 parameters:
   server: 34.162.245.41
   path: /home/ubuntu/nfs-pro
