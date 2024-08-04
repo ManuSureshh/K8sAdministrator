@@ -25,10 +25,12 @@ helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/
 ```
 helm install nfs-subdir-external-provisioner \
 nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
---set nfs.server=10.124.0.9 \
+--set nfs.server=34.162.245.41 \
 --set nfs.path=/data/nfs \
 --set storageClass.onDelete=true
 ```
+Note: - Make sure you change 34.162.245.41 based on your NFS server IP.
+
 ```
 # Check pods and storage classes:
 kubectl get pod
