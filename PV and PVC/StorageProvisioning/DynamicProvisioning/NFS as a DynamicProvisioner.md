@@ -14,3 +14,21 @@ parameters:
   path: <EXPORT_PATH>
 reclaimPolicy: Retain # Retail, Recycle, Delete
 volumeBindingMode: Immediate # Immediate, WaitForFirstConsumer
+```
+
+<br>
+
+`pvc.yaml`
+```
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-nfs-pvc
+spec:
+  accessModes:
+    - ReadWriteMany # should be same as mentioned in StorageClass
+  resources:
+    requests:
+      storage: 10Gi # should be same as mentioned in StorageClass
+  storageClassName: nfs-storage 
+```
