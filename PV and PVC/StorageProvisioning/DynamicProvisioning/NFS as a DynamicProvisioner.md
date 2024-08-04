@@ -1,6 +1,8 @@
 ## NFS as a DynamicProvisioner
 - We can use NFS as both static and Dynamic Provisioner
 - In NFS as a Dynamic Provisioner, we create StorageClass and PVC. StorageClass will create PV automatically.
+
+## Installing `nfs-client-provisioner`
 - In order to use NFS as a Dynamic Provisioner, we need to install the `nfs-client-provisioner`.
 ```
 curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
@@ -35,7 +37,7 @@ kubectl get sc
 
 <br>
 
-
+## Creating manifest files
 - And while creating StorageClass, we should mention the 
 `StorageClass.yaml`
 ```
