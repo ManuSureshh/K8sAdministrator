@@ -52,6 +52,11 @@ sudo nano /etc/exports
 sudo exportfs -ra
 ```
 
+## Check the exported Shares
+```
+sudo exportfs -v
+```
+
 <br>
 
 # Install NFS Client Utilities onto the nodes 
