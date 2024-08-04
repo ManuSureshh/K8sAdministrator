@@ -1,8 +1,8 @@
 ### The cloud providers also provides the services that we can use them for a storage.
 
-1.AWS
-   - EBS
-   - EFS
+1. AWS
+    - EBS
+    - EFS
 
 2. Azure
    - Azure Disks
