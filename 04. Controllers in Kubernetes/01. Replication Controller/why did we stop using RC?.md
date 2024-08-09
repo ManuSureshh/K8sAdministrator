@@ -1,4 +1,3 @@
 
-- `ReplicationControllers (RC)` do not support rolling updates, rollbacks, or easy management of application versions. Therefore we have a `Deployments`.
-- `ReplicationControllers (RC)` Lacks management of pod replicas. Therefore we have `ReplicaSets`.
-- `ReplicationControllers (RC)` cannot be used with Deployments.
+- `ReplicationControllers (RC)` Do not support rolling updates, rollbacks, or easy management of application versions. Therefore, we use `Deployments`.
+- `ReplicationControllers (RC)` Lack advanced management of pod replicas. Therefore, we use `ReplicaSets`.
