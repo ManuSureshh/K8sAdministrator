@@ -30,6 +30,8 @@ Iam scaing down the pods.
 ![image](https://github.com/user-attachments/assets/0901ff9c-3f70-430d-a325-6a0ae9b58412)
 
 Before scale them back, I would like to redeploy the RC.
+<br>
+
 ![image](https://github.com/user-attachments/assets/6ea60c1c-1541-4a54-a484-e3aaf23587b6)
 
 <br>
