@@ -21,6 +21,17 @@
 
 ![image](https://github.com/user-attachments/assets/8c241130-74cd-49ef-8c74-331a5a527629)
 ![image](https://github.com/user-attachments/assets/f5e770f0-555d-42ae-88f2-acd4e11d140f)
+
+<br>
+
 Iam scaing down the pods.
+<br>
+
 ![image](https://github.com/user-attachments/assets/0901ff9c-3f70-430d-a325-6a0ae9b58412)
 
+Before scale them back, I would like to redeploy the RC.
+![image](https://github.com/user-attachments/assets/6ea60c1c-1541-4a54-a484-e3aaf23587b6)
+
+<br>
+
+Previously there was a pod running, its gone.
