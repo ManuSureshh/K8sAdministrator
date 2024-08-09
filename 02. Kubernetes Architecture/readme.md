@@ -7,6 +7,7 @@
 <br>
 
 1. kubectl Sends a Request to the API Server
+---
 - When you execute a command using kubectl (e.g., to create a pod or deploy an application), the request is sent to the Kubernetes API Server.
 - The API Server is the central management entity and the gateway to the Kubernetes cluster.
 
