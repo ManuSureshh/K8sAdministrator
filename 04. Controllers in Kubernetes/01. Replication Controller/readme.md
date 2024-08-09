@@ -20,4 +20,7 @@
 # How?
 
 ![image](https://github.com/user-attachments/assets/8c241130-74cd-49ef-8c74-331a5a527629)
+![image](https://github.com/user-attachments/assets/f5e770f0-555d-42ae-88f2-acd4e11d140f)
+Iam scaing down the pods.
+![image](https://github.com/user-attachments/assets/0901ff9c-3f70-430d-a325-6a0ae9b58412)
 
