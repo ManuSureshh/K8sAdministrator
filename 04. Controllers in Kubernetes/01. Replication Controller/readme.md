@@ -17,3 +17,7 @@
     - Redeploying the RC will not reuse existing pods; it will create new ones to meet the replica count. Existing pods will not receive the new configuration details unless they are replaced by the new pods.
 
 
+How?
+
+![image](https://github.com/user-attachments/assets/8c241130-74cd-49ef-8c74-331a5a527629)
+
