@@ -39,3 +39,8 @@
 Summary
 ---
 - `kubectl` → `API Server`: kubectl sends a request to the API Server.
+- `API Server` → `etcd`: API Server validates, stores the request, and updates etcd with the desired state.
+- `Scheduler` → `API Server`: Scheduler checks with the API Server for pods needing scheduling and decides where to place them.
+- `API Server` → `etcd`: API Server updates etcd with the scheduling decision.
+- `Controller Manager` → `Kubelet`: Controller Manager ensures the correct number of pods and triggers kubelet on the worker node.
+- `Kubelet` → `API Server`: Kubelet starts the pod and reports the status back to the API Server.
