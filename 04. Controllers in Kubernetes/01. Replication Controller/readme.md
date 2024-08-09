@@ -9,3 +9,5 @@
     - If we deploy RC with 4 replicas, it will always make sure 4 pods are running.
     - If 1 pod goes down, it will replace it with a new pod.
     - And if that pod comes live, it will not reuse the pod.
+
+- `Replication Controller will not handle the updates of Existing Pods`.
