@@ -11,3 +11,7 @@
     - And if that pod comes live, it will not reuse the pod.
 
 - `Replication Controller will not handle the updates of Existing Pods`.
+
+  i.e.
+    - Let's say I want to update the Pod configurations (environment variables, resource limits, or mounted volumes), at that time we have to redeploy the Replication Controller.
+    - Before redeploying, the pods will be running already. So if I redeploy the Replication Controller, it will not reuse the exsiting pods. Which means, existing pods will not get the configuration details. 
