@@ -10,7 +10,7 @@
     - If 1 pod goes down, it will replace it with a new pod.
     - And if that pod comes live, it will not reuse the pod.
 
-- `Replication Controller will not handle the updates of Existing Pods`.
+- `Replication Controller will not handle the updates and rollbacks for Existing Pods`.
 
   i.e.
     - Let's say I want to update the Pod configurations (environment variables, resource limits, or mounted volumes), at that time we have to redeploy the Replication Controller.
